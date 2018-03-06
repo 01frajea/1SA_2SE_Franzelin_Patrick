@@ -13,28 +13,22 @@ namespace _1sa_2se_Franzelin_Patrick
     {
         int tankinhalt = 0;
         string gefahrenekm;
-       
-        
-       
+ 
         public Form1()
         {
             InitializeComponent();
            
         }
-        private void tankenbtn_Click(object sender, EventArgs e)
-        {
-            tankinhalt = Convert.ToInt32(tankenlbl.Text);
-            progressBar1.Value = progressBar1.Value + tankinhalt;
-            austanken.Text = "Tankihnhalt:" + tankinhalt.ToString();
-           
-        }
+        
         private void fahrenbtn_Click(object sender, EventArgs e)
         {
+            ausfahren.Text = "";
             gefahrenekm = fahrenlbl.Text;
             ausfahren.Text = "gefahrene km:"+gefahrenekm.ToString();
         }
         private void autobtn_Click(object sender, EventArgs e)
         {   string tankgröße, marke, ps, verbrauch;
+
         TextBox1.Text = "";
 
             switch (farbebox.Text)
@@ -61,10 +55,17 @@ namespace _1sa_2se_Franzelin_Patrick
             ps = pslbl.Text;
             verbrauch = Verbrauchlbl.Text;
             TextBox1.Text += "Tankgröße" + tankgröße + "\n marke:" + marke + "\n ps:" + ps;
-            tankinhalt = 0;
-            progressBar1.Maximum = Convert.ToInt32(tankgrößelbl.Text);
+            
         }
+        private void tankenbtn_Click(object sender, EventArgs e)
+        {
+            progressBar1.Maximum = Convert.ToInt32(tankgrößelbl.Text);
+            austanken.Text = "";
+            tankinhalt = Convert.ToInt32(tankenlbl.Text);
+            progressBar1.Value = progressBar1.Value + tankinhalt;
+            austanken.Text = "Tankihnhalt:" + tankinhalt.ToString();
 
+        }
         
 
       

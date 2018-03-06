@@ -13,18 +13,20 @@ namespace _1sa_2se_Franzelin_Patrick
     {
         int tankinhalt = 0;
         string gefahrenekm;
-
+       
+        
+       
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
         private void tankenbtn_Click(object sender, EventArgs e)
         {
-            
-            tankinhalt = tankinhalt + Convert.ToInt32(tankenlbl.Text);
-            progressBar1.Value = progressBar1.Value + tankinhalt;
-            
 
+            progressBar1.Value = progressBar1.Value + tankinhalt;
+            //tankinhalt = (Convert.ToInt32(tankenlbl.Text) * Convert.ToInt32(tankgrößelbl))/ 100;
+         
+            
         }
         private void fahrenbtn_Click(object sender, EventArgs e)
         {
@@ -35,8 +37,6 @@ namespace _1sa_2se_Franzelin_Patrick
             
             switch (farbebox.Text)
             {
-                    
-
                 case "rot":
                     TextBox1.Text += "Farbe: rot \n";
                     break;

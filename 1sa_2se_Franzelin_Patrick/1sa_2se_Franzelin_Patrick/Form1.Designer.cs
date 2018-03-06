@@ -123,7 +123,7 @@
             "blau",
             "schwarz",
             "weis"});
-            this.farbebox.Location = new System.Drawing.Point(34, 80);
+            this.farbebox.Location = new System.Drawing.Point(50, 80);
             this.farbebox.Name = "farbebox";
             this.farbebox.Size = new System.Drawing.Size(131, 21);
             this.farbebox.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             this.TextBox1.Location = new System.Drawing.Point(265, 192);
             this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(188, 168);
+            this.TextBox1.Size = new System.Drawing.Size(188, 181);
             this.TextBox1.TabIndex = 12;
             this.TextBox1.Text = "";
             // 

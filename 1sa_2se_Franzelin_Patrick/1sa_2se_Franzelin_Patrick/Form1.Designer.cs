@@ -81,7 +81,7 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(12, 248);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(230, 23);
+            this.progressBar1.Size = new System.Drawing.Size(214, 23);
             this.progressBar1.TabIndex = 5;
             // 
             // fahrenbtn
@@ -92,6 +92,7 @@
             this.fahrenbtn.TabIndex = 6;
             this.fahrenbtn.Text = "fahren";
             this.fahrenbtn.UseVisualStyleBackColor = true;
+            this.fahrenbtn.Click += new System.EventHandler(this.fahrenbtn_Click);
             // 
             // autobtn
             // 

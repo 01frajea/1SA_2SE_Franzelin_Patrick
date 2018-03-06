@@ -12,6 +12,7 @@ namespace _1sa_2se_Franzelin_Patrick
     public partial class Form1 : Form
     {
         int tankinhalt = 0;
+        string gefahrenekm;
 
         public Form1()
         {
@@ -24,6 +25,10 @@ namespace _1sa_2se_Franzelin_Patrick
             progressBar1.Value = progressBar1.Value + tankinhalt;
             
 
+        }
+        private void fahrenbtn_Click(object sender, EventArgs e)
+        {
+            gefahrenekm = fahrenlbl.Text;
         }
         private void autobtn_Click(object sender, EventArgs e)
         {   string tankgröße, marke, ps, verbrauch;
@@ -53,9 +58,12 @@ namespace _1sa_2se_Franzelin_Patrick
             marke = Markelbl.Text;
             ps = pslbl.Text;
             verbrauch = Verbrauchlbl.Text;         
-            TextBox1.Text += "Tankgröße" + tankgröße + "\n marke:" + marke + "\n ps:" + ps+"\n tankinhatl"+tankinhalt;
+            TextBox1.Text += "Tankgröße" + tankgröße + "\n marke:" + marke + "\n ps:" + ps+"\n tankinhatl"+tankinhalt+"\n gefahrene km:"+gefahrenekm;
+            tankinhalt = 0;
 
         }
+
+        
 
       
        

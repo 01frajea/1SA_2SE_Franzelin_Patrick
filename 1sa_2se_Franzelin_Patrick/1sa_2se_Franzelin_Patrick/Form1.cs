@@ -11,11 +11,20 @@ namespace _1sa_2se_Franzelin_Patrick
 {
     public partial class Form1 : Form
     {
+        int tankinhalt = 0;
+
         public Form1()
         {
             InitializeComponent();
         }
+        private void tankenbtn_Click(object sender, EventArgs e)
+        {
+            
+            tankinhalt = tankinhalt + Convert.ToInt32(tankenlbl.Text);
+            progressBar1.Value = progressBar1.Value + tankinhalt;
+            
 
+        }
         private void autobtn_Click(object sender, EventArgs e)
         {   string tankgröße, marke, ps, verbrauch;
             
@@ -44,18 +53,11 @@ namespace _1sa_2se_Franzelin_Patrick
             marke = Markelbl.Text;
             ps = pslbl.Text;
             verbrauch = Verbrauchlbl.Text;         
-            TextBox1.Text += "Tankgröße" + tankgröße + "\n marke:" + marke + "\n ps:" + ps;
+            TextBox1.Text += "Tankgröße" + tankgröße + "\n marke:" + marke + "\n ps:" + ps+"\n tankinhatl"+tankinhalt;
 
         }
 
-        private void tankenbtn_Click(object sender, EventArgs e)
-        {
-            int tankinhalt;
-
-           tankinhalt =
-
-
-        }
+      
        
     }
 
